@@ -1,0 +1,63 @@
+@use '_variables' as *;
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../images/pattern-circles.svg);
+        background-repeat: no-repeat;
+        padding-top: 89px;
+        padding-bottom: 32px;
+        background-position: center;
+        background-position-y: 57px;
+        margin-bottom: 32px;
+        @media only screen and (min-width: 1440px) {
+            margin-bottom: 54px;
+            height: 202px;
+            padding-bottom: 0;
+            padding-top: 67px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+            color: $headingColor;
+            line-height: 27px;
+            padding-bottom: 8px;
+            @media only screen and (min-width: 1440px) {
+                font-size: 28px;
+                line-height: 29px;
+                padding-bottom: 12px;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media only screen and (min-width: 1440px) {
+                flex-direction: row;
+            }
+            p {
+                font-size: 13px;
+                font-weight: 600;
+                color: $textColor;
+                line-height: 23px;
+                padding-right: 3px;
+                @media only screen and (min-width: 1440px) {
+                    font-size: 15px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+}
