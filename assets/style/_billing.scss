@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+    box-shadow: 0px 20px 30px -5px $mainShadow;
     border-radius: 8px;
     @media only screen and (min-width: 1440px) {
         width: 540px;
@@ -75,8 +75,8 @@
                     -webkit-appearance: none;
                     height: 40px;
                     width: 40px;
-                    background: #10d8c4;
-                    box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+                    background: $sliderBackround;
+                    box-shadow: 0px 15px 30px $sliderShadow;
                     cursor: pointer;
                     margin-top: -17px;
                     border-radius: 50%;
@@ -107,28 +107,34 @@
                 padding: 0;
             }
 
-            h1 {
+            .dollar,
+            h2 {
                 font-size: 32px;
                 font-weight: 800;
                 color: $textCTABackground;
                 letter-spacing: -0.8px;
-                padding-right: 10px;
+
                 @media only screen and (min-width: 1440px) {
                     font-size: 40px;
                     line-height: 55px;
                     letter-spacing: -1px;
-                    padding-right: 8px;
                 }
             }
 
-            small {
+            .dollar {
+                padding: 0;
+            }
+
+            #duration {
                 font-size: 14px;
                 line-height: 19px;
                 color: $textColor;
                 font-weight: 600;
+                padding-left: 10px;
                 @media only screen and (min-width: 1440px) {
                     font-size: 16px;
                     line-height: 22px;
+                    padding-left: 8px;
                 }
             }
         }

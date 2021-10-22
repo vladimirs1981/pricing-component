@@ -31,7 +31,7 @@
 
             <section class="billing">
                 <div class="pageviews">
-                    <h2>100k Pageviews</h2>
+                    <h2 id="pageviews">100k Pageviews</h2>
                     <div class="rangeContainer">
                         <input
                             type="range"
@@ -43,15 +43,17 @@
                         />
                     </div>
                     <div class="price">
-                        <h1>$16.00</h1>
-                        <small>/month</small>
+                        <small class="dollar">$</small>
+                        <h2 id="price">16</h2>
+                        <small class="dollar">.00</small>
+                        <small id="duration">/month</small>
                     </div>
                 </div>
 
                 <div class="billing-div">
                     <p>Monthly Billing</p>
                     <label class="switch">
-                        <input type="checkbox" />
+                        <input id="checkBox" type="checkbox" />
                         <span class="slider round"></span>
                     </label>
                     <p>Yearly Billing</p>

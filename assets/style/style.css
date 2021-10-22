@@ -164,7 +164,7 @@ main .heading div p {
   -webkit-appearance: none;
   height: 40px;
   width: 40px;
-  background: #10d8c4;
+  background: #10d5c2;
   box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
   cursor: pointer;
   margin-top: -17px;
@@ -195,31 +195,36 @@ main .heading div p {
     padding: 0;
   }
 }
-.billing .pageviews .price h1 {
+.billing .pageviews .price .dollar,
+.billing .pageviews .price h2 {
   font-size: 32px;
   font-weight: 800;
   color: #293356;
   letter-spacing: -0.8px;
-  padding-right: 10px;
 }
 @media only screen and (min-width: 1440px) {
-  .billing .pageviews .price h1 {
+  .billing .pageviews .price .dollar,
+.billing .pageviews .price h2 {
     font-size: 40px;
     line-height: 55px;
     letter-spacing: -1px;
-    padding-right: 8px;
   }
 }
-.billing .pageviews .price small {
+.billing .pageviews .price .dollar {
+  padding: 0;
+}
+.billing .pageviews .price #duration {
   font-size: 14px;
   line-height: 19px;
   color: #858fad;
   font-weight: 600;
+  padding-left: 10px;
 }
 @media only screen and (min-width: 1440px) {
-  .billing .pageviews .price small {
+  .billing .pageviews .price #duration {
     font-size: 16px;
     line-height: 22px;
+    padding-left: 8px;
   }
 }
 .billing .billing-div {
