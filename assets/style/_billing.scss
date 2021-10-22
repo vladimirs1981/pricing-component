@@ -1,0 +1,313 @@
+@use '_variables' as *;
+
+.billing {
+    background-color: $pricingComponentBackground;
+    min-width: 327px;
+    width: 327px;
+    height: auto;
+    margin: 0 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 20px 30px -5px $mainShadow;
+    border-radius: 8px;
+    @media only screen and (min-width: 1440px) {
+        width: 540px;
+    }
+
+    .pageviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 34px;
+        @media only screen and (min-width: 1440px) {
+            width: 100%;
+            position: relative;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-bottom: 70px;
+            padding-left: 46px;
+        }
+        h2 {
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 1.71px;
+            text-transform: uppercase;
+            color: $textColor;
+            font-weight: 800;
+            @media only screen and (min-width: 1440px) {
+                margin-right: 103px;
+                font-size: 14px;
+                letter-spacing: 2px;
+                line-height: 19px;
+            }
+        }
+
+        .rangeContainer {
+            padding-top: 25px;
+            @media only screen and (min-width: 1440px) {
+                position: absolute;
+                padding: 0;
+                top: 119px;
+            }
+
+            input {
+                width: 279px;
+                @media only screen and (min-width: 1440px) {
+                    width: 444px;
+                }
+                -webkit-appearance: none;
+                -webkit-transition: 0.2s;
+                transition: opacity 0.2s;
+                border-radius: 5px;
+                &:focus {
+                    outline: none;
+                }
+                &::-webkit-slider-runnable-track {
+                    height: 8px;
+                    -webkit-appearance: none;
+                    width: 100%;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    height: 40px;
+                    width: 40px;
+                    background: $sliderBackround;
+                    box-shadow: 0px 15px 30px $sliderShadow;
+                    cursor: pointer;
+                    margin-top: -17px;
+                    border-radius: 50%;
+                    background-image: url(../images/icon-slider.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    &:hover {
+                        background: $fullSliderBar;
+                        background-image: url(../images/icon-slider.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    &:active {
+                        background: $sliderActiveColor;
+                        background-image: url(../images/icon-slider.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            padding-top: 24px;
+            @media only screen and (min-width: 1440px) {
+                padding: 0;
+            }
+
+            .dollar,
+            h2 {
+                font-size: 32px;
+                font-weight: 800;
+                color: $textCTABackground;
+                letter-spacing: -0.8px;
+
+                @media only screen and (min-width: 1440px) {
+                    font-size: 40px;
+                    line-height: 55px;
+                    letter-spacing: -1px;
+                }
+            }
+
+            .dollar {
+                padding: 0;
+            }
+
+            #duration {
+                font-size: 14px;
+                line-height: 19px;
+                color: $textColor;
+                font-weight: 600;
+                padding-left: 10px;
+                @media only screen and (min-width: 1440px) {
+                    font-size: 16px;
+                    line-height: 22px;
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+
+    .billing-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 34px;
+        margin-bottom: 38px;
+        @media only screen and (min-width: 1440px) {
+            width: 100%;
+            justify-content: flex-end;
+            padding-right: 65px;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+            color: $textColor;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 43px;
+            height: 22px;
+            margin-left: 16px;
+            margin-right: 16px;
+
+            input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $toggleBackgroundColor;
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 14px;
+                    width: 14px;
+                    left: 4px;
+                    bottom: 4px;
+                    right: 4px;
+                    background-color: $toggleCircleColor;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                }
+            }
+
+            input:checked + .slider {
+                background-color: $toggleCheckedColor;
+            }
+
+            input:checked + .slider:before {
+                -webkit-transform: translateX(22px);
+                -ms-transform: translateX(22px);
+                transform: translateX(22px);
+            }
+
+            .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        }
+
+        .discount {
+            color: $discountText;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 14px;
+            margin-left: 5px;
+            background-color: $discountBackground;
+            line-height: 14px;
+            border-radius: 9.5px;
+            padding: 10px;
+            @media only screen and (min-width: 1440px) {
+                width: 80px;
+                margin-left: 9px;
+            }
+
+            h3 {
+                font-size: 10px;
+                font-weight: 800;
+            }
+
+            small {
+                display: none;
+                @media only screen and (min-width: 1440px) {
+                    font-size: 10px;
+                    font-weight: 800;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid $borderColor;
+        padding-top: 24px;
+        width: 100%;
+        @media only screen and (min-width: 1440px) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 32px;
+            padding-bottom: 22px;
+        }
+
+        .paraCheck {
+            @media only screen and (min-width: 1440px) {
+                flex-direction: column;
+                height: 100%;
+            }
+            .check {
+                display: flex;
+                align-items: center;
+
+                padding-bottom: 10px;
+                svg {
+                    margin-right: 16px;
+                }
+
+                p {
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    color: $textColor;
+                }
+            }
+        }
+    }
+
+    .trialBtn {
+        width: 170px;
+        height: 41px;
+        border: none;
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 16px;
+        background-color: $textCTABackground;
+        color: $cTAText;
+        border-radius: 20.5px;
+        margin-top: 22px;
+        margin-bottom: 32px;
+        cursor: pointer;
+        @media only screen and (min-width: 1440px) {
+            height: 44px;
+        }
+    }
+}

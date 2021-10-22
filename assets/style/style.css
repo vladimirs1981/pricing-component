@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+}
+main .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  padding-top: 89px;
+  padding-bottom: 32px;
+  background-position: center;
+  background-position-y: 57px;
+  margin-bottom: 32px;
+}
+@media only screen and (min-width: 1440px) {
+  main .heading {
+    margin-bottom: 54px;
+    height: 202px;
+    padding-bottom: 0;
+    padding-top: 67px;
+  }
+}
+main .heading h1 {
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: #293356;
+  line-height: 27px;
+  padding-bottom: 8px;
+}
+@media only screen and (min-width: 1440px) {
+  main .heading h1 {
+    font-size: 28px;
+    line-height: 29px;
+    padding-bottom: 12px;
+  }
+}
+main .heading div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 1440px) {
+  main .heading div {
+    flex-direction: row;
+  }
+}
+main .heading div p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #858fad;
+  line-height: 23px;
+  padding-right: 3px;
+}
+@media only screen and (min-width: 1440px) {
+  main .heading div p {
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+
+.billing {
+  background-color: white;
+  min-width: 327px;
+  width: 327px;
+  height: auto;
+  margin: 0 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 8px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing {
+    width: 540px;
+  }
+}
+.billing .pageviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 34px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .pageviews {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 70px;
+    padding-left: 46px;
+  }
+}
+.billing .pageviews h2 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.71px;
+  text-transform: uppercase;
+  color: #858fad;
+  font-weight: 800;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .pageviews h2 {
+    margin-right: 103px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 19px;
+  }
+}
+.billing .pageviews .rangeContainer {
+  padding-top: 25px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .pageviews .rangeContainer {
+    position: absolute;
+    padding: 0;
+    top: 119px;
+  }
+}
+.billing .pageviews .rangeContainer input {
+  width: 279px;
+  -webkit-appearance: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 5px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .pageviews .rangeContainer input {
+    width: 444px;
+  }
+}
+.billing .pageviews .rangeContainer input:focus {
+  outline: none;
+}
+.billing .pageviews .rangeContainer input::-webkit-slider-runnable-track {
+  height: 8px;
+  -webkit-appearance: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.billing .pageviews .rangeContainer input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  background: #10d5c2;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  cursor: pointer;
+  margin-top: -17px;
+  border-radius: 50%;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.billing .pageviews .rangeContainer input::-webkit-slider-thumb:hover {
+  background: #a5f3eb;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.billing .pageviews .rangeContainer input::-webkit-slider-thumb:active {
+  background: #24aea1;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.billing .pageviews .price {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .pageviews .price {
+    padding: 0;
+  }
+}
+.billing .pageviews .price .dollar,
+.billing .pageviews .price h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #293356;
+  letter-spacing: -0.8px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .pageviews .price .dollar,
+.billing .pageviews .price h2 {
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -1px;
+  }
+}
+.billing .pageviews .price .dollar {
+  padding: 0;
+}
+.billing .pageviews .price #duration {
+  font-size: 14px;
+  line-height: 19px;
+  color: #858fad;
+  font-weight: 600;
+  padding-left: 10px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .pageviews .price #duration {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 8px;
+  }
+}
+.billing .billing-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 34px;
+  margin-bottom: 38px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .billing-div {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 65px;
+  }
+}
+.billing .billing-div p {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #858fad;
+}
+.billing .billing-div .switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 22px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.billing .billing-div .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.billing .billing-div .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cfd8ef;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.billing .billing-div .switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.billing .billing-div .switch input:checked + .slider {
+  background-color: #7aeadf;
+}
+.billing .billing-div .switch input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+.billing .billing-div .switch .slider.round {
+  border-radius: 34px;
+}
+.billing .billing-div .switch .slider.round:before {
+  border-radius: 50%;
+}
+.billing .billing-div .discount {
+  color: #ff8c66;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 14px;
+  margin-left: 5px;
+  background-color: #feece7;
+  line-height: 14px;
+  border-radius: 9.5px;
+  padding: 10px;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .billing-div .discount {
+    width: 80px;
+    margin-left: 9px;
+  }
+}
+.billing .billing-div .discount h3 {
+  font-size: 10px;
+  font-weight: 800;
+}
+.billing .billing-div .discount small {
+  display: none;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .billing-div .discount small {
+    font-size: 10px;
+    font-weight: 800;
+    display: block;
+  }
+}
+.billing .offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #ecf0fb;
+  padding-top: 24px;
+  width: 100%;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .offer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 32px;
+    padding-bottom: 22px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .billing .offer .paraCheck {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.billing .offer .paraCheck .check {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.billing .offer .paraCheck .check svg {
+  margin-right: 16px;
+}
+.billing .offer .paraCheck .check p {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #858fad;
+}
+.billing .trialBtn {
+  width: 170px;
+  height: 41px;
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #293356;
+  color: #bdccff;
+  border-radius: 20.5px;
+  margin-top: 22px;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1440px) {
+  .billing .trialBtn {
+    height: 44px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

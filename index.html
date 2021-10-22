@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./assets/style/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src="./index.js"></script>
+        <title>traffic-based pricing</title>
+    </head>
+    <body>
+        <main>
+            <section class="heading">
+                <h1>Simple, traffic-based pricing</h1>
+                <div>
+                    <p>Sign-up for our 30-day trial.</p>
+                    <p>No credit card required.</p>
+                </div>
+            </section>
+
+            <section class="billing">
+                <div class="pageviews">
+                    <h2 id="pageviews">100k Pageviews</h2>
+                    <div class="rangeContainer">
+                        <input
+                            type="range"
+                            name="slider"
+                            id="slider"
+                            min="1"
+                            max="5"
+                            value="3"
+                        />
+                    </div>
+                    <div class="price">
+                        <small class="dollar">$</small>
+                        <h2 id="price">16</h2>
+                        <small class="dollar">.00</small>
+                        <small id="duration">/month</small>
+                    </div>
+                </div>
+
+                <div class="billing-div">
+                    <p>Monthly Billing</p>
+                    <label class="switch">
+                        <input id="checkBox" type="checkbox" />
+                        <span class="slider round"></span>
+                    </label>
+                    <p>Yearly Billing</p>
+                    <div class="discount">
+                        <h3>-25%</h3>
+                        <small>discount</small>
+                    </div>
+                </div>
+                <div class="offer">
+                    <div class="paraCheck">
+                        <div class="check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="9"
+                                height="8"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="#10D8C4"
+                                    stroke-width="2"
+                                    d="M1 4.134l1.907 1.908L7.949 1"
+                                />
+                            </svg>
+                            <p>Unlimited websites</p>
+                        </div>
+
+                        <div class="check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="9"
+                                height="8"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="#10D8C4"
+                                    stroke-width="2"
+                                    d="M1 4.134l1.907 1.908L7.949 1"
+                                />
+                            </svg>
+                            <p>100% data ownership</p>
+                        </div>
+
+                        <div class="check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="9"
+                                height="8"
+                            >
+                                <path
+                                    fill="none"
+                                    stroke="#10D8C4"
+                                    stroke-width="2"
+                                    d="M1 4.134l1.907 1.908L7.949 1"
+                                />
+                            </svg>
+                            <p>Email reports</p>
+                        </div>
+                    </div>
+                    <button class="trialBtn" type="submit">
+                        Start my trial
+                    </button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
