@@ -7,7 +7,13 @@ main {
     align-items: center;
     background-image: url(../images/bg-pattern.svg);
     background-repeat: no-repeat;
+    background-size: 100% 400px;
+    background-position: top;
+    @media only screen and (min-width: 1440px) {
+        background-size: 100% 449px;
+    }
     .heading {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;

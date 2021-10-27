@@ -30,7 +30,9 @@ checkBox.addEventListener('click', () => {
 function animateValue(price, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
+        if (!startTimestamp) {
+            startTimestamp = timestamp;
+        }
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
         price.innerHTML = Math.floor(progress * (end - start) + start);
         if (progress < 1) {
@@ -98,10 +100,12 @@ function changeDuration() {
     if (!checkBox.checked) {
         duration.innerText = '/month';
         setPrice();
+        document.querySelector('.discount').style.visibility = 'visible';
     }
     if (checkBox.checked) {
         duration.innerText = '/year';
         setPrice();
+        document.querySelector('.discount').style.visibility = 'hidden';
     }
 }
 

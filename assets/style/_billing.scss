@@ -94,6 +94,7 @@
                         background-image: url(../images/icon-slider.svg);
                         background-repeat: no-repeat;
                         background-position: center;
+                        cursor: grabbing;
                     }
                 }
             }
@@ -118,6 +119,7 @@
                     font-size: 40px;
                     line-height: 55px;
                     letter-spacing: -1px;
+                    margin: 0;
                 }
             }
 
@@ -183,6 +185,9 @@
                 background-color: $toggleBackgroundColor;
                 -webkit-transition: 0.4s;
                 transition: 0.4s;
+                &:hover {
+                    background-color: $toggleCheckedColor;
+                }
                 &::before {
                     position: absolute;
                     content: '';
@@ -268,8 +273,12 @@
         }
 
         .paraCheck {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
             @media only screen and (min-width: 1440px) {
-                flex-direction: column;
+                align-items: flex-start;
                 height: 100%;
             }
             .check {
@@ -301,13 +310,10 @@
         font-size: 12px;
         line-height: 16px;
         background-color: $textCTABackground;
-        color: $cTAText;
+        color: $ctaText;
         border-radius: 20.5px;
         margin-top: 22px;
         margin-bottom: 32px;
         cursor: pointer;
-        @media only screen and (min-width: 1440px) {
-            height: 44px;
-        }
     }
 }

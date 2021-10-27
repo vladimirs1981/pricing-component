@@ -17,8 +17,16 @@ main {
   align-items: center;
   background-image: url(../images/bg-pattern.svg);
   background-repeat: no-repeat;
+  background-size: 100% 400px;
+  background-position: top;
+}
+@media only screen and (min-width: 1440px) {
+  main {
+    background-size: 100% 449px;
+  }
 }
 main .heading {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,6 +192,7 @@ main .heading div p {
   background-image: url(../images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
+  cursor: grabbing;
 }
 .billing .pageviews .price {
   display: flex;
@@ -208,6 +217,7 @@ main .heading div p {
     font-size: 40px;
     line-height: 55px;
     letter-spacing: -1px;
+    margin: 0;
   }
 }
 .billing .pageviews .price .dollar {
@@ -270,6 +280,9 @@ main .heading div p {
   background-color: #cfd8ef;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+.billing .billing-div .switch .slider:hover {
+  background-color: #7aeadf;
 }
 .billing .billing-div .switch .slider::before {
   position: absolute;
@@ -350,9 +363,15 @@ main .heading div p {
     padding-bottom: 22px;
   }
 }
+.billing .offer .paraCheck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 @media only screen and (min-width: 1440px) {
   .billing .offer .paraCheck {
-    flex-direction: column;
+    align-items: flex-start;
     height: 100%;
   }
 }
@@ -385,11 +404,6 @@ main .heading div p {
   margin-top: 22px;
   margin-bottom: 32px;
   cursor: pointer;
-}
-@media only screen and (min-width: 1440px) {
-  .billing .trialBtn {
-    height: 44px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
